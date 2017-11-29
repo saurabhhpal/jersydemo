@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>example</groupId>
+  <artifactId>demo1</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>demo1 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <repositories>
+        <repository>
+            <id>maven2-repository.java.net</id>
+            <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+ 
+  <dependencies>
+  <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.3</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  
+      <dependency>
+          <groupId>com.sun.jersey</groupId>
+          <artifactId>jersey-server</artifactId>
+          <version>1.8</version>
+      </dependency>
+  
+  
+  
+      <dependency> <!-- ONLY USED LOCALY -->
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>5.1.34</version>  <!-- v5.x.x is Java 7, v6.x.x is Java 8 -->
+      </dependency>
+      <dependency>
+          <groupId>com.google.cloud.sql</groupId>
+          <artifactId>mysql-socket-factory</artifactId>
+          <version>1.0.2</version>
+      </dependency>
+      <dependency>
+          <groupId>com.owlike</groupId>
+          <artifactId>genson</artifactId>
+          <version>0.99</version>
+      </dependency>
+  </dependencies>
+  
+  
+   <properties>
+        <INSTANCE_CONNECTION_NAME>saurabhpyaal:asia-south1:test1</INSTANCE_CONNECTION_NAME>
+        <user>root</user>
+        <password>root</password>
+        <database>test1</database>
+    </properties>
+  
+
+  <build>
+    <finalName>demo1</finalName>
+    
+    <plugins>
+          <plugin>
+              <groupId>com.google.appengine</groupId>
+              <artifactId>appengine-maven-plugin</artifactId>
+              <version>1.9.9</version>
+          </plugin>
+          <plugin>
+     <groupId>org.eclipse.jetty</groupId>
+     <artifactId>jetty-maven-plugin</artifactId>
+     <version>9.3.7.v20160115</version>
+   </plugin>
+             
+      </plugins>
+    
+  </build>
+</project>

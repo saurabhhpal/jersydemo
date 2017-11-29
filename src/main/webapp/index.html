@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Candidate</title>
+</head>
+<body>
+<h1> Customer form</h1>
+
+<form action="/add/addcandidates" method="POST">
+<table>
+<tr><td>Name :</td><td>  <input type="text" name="_name"></td></tr>
+
+<tr><td>Password</td><td> <input type="password" name="_pass"></td></tr>
+<tr><td>Phone</td><td><input type="number" name="_phone"></td></tr>
+<tr><td>Email</td><td><input type="text" name ="_email"></td></tr>
+<tr><td>City </td><td><input type="text" name ="_city"></td></tr>
+
+<tr><td  colspan="2"><input type="submit" value="submit"> </td></tr>
+</table>
+</form>
+
+
+<form action="/add/delete" method="post">
+<input type="text" name="_name">
+<input type="submit" value="delete"> 
+
+
+</form>
+
+</body>
+</html>
