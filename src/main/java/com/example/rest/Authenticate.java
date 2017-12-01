@@ -1,4 +1,4 @@
-package com.example.webservice;
+package com.example.rest;
 
 import java.util.UUID;
 
@@ -11,7 +11,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import com.example.dao.DataAccessLayer;
-import com.example.dao.Token;
+import com.example.model.Token;
 import com.google.api.client.repackaged.org.apache.commons.codec.binary.Base64;
 
 @Path("/addAuth")

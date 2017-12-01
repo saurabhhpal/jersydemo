@@ -2,10 +2,6 @@ package com.example.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
-import com.google.appengine.api.utils.SystemProperty;
-
-
 public class Database {
 	
 	public Connection getConnection() throws Exception 

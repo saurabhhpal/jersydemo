@@ -6,9 +6,7 @@ import java.util.ArrayList;
 import javax.ws.rs.core.Response;
 
 import com.example.dao.DataAccessLayer;
-import com.example.dao.Candidate;
 import com.example.dao.Database;
-import com.example.dao.Token;
 
 public class CandidateManager {
 	

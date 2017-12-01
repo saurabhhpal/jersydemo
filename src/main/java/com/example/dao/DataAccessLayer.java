@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.example.model.Candidate;
+import com.example.model.Token;
+
 public class DataAccessLayer {
 	
 
@@ -50,11 +53,11 @@ ResultSet rs=null;
 			
 		PreparedStatement preparedStatement =connection.prepareStatement(sql);
 		
-			preparedStatement.setString(1, candidate.name);
-			preparedStatement.setString(2, candidate.pass);
-			preparedStatement.setInt(3, candidate.phone);
-			preparedStatement.setString(4, candidate.city);
-			preparedStatement.setString(5, candidate.email);
+			preparedStatement.setString(1, candidate.getName());
+			preparedStatement.setString(2, candidate.getPass());
+			preparedStatement.setInt(3, candidate.getPhone());
+			preparedStatement.setString(4, candidate.getCity());
+			preparedStatement.setString(5, candidate.getEmail());
 			preparedStatement.executeUpdate();
 			return "success";
 			

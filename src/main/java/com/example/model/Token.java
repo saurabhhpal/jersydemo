@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.model;
 
 public class Token {
 	

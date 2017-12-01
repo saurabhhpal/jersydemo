@@ -1,11 +1,11 @@
-package com.example.webservice;
+package com.example.rest;
 
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -13,7 +13,7 @@ import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
-import com.example.dao.Candidate;
+import com.example.model.Candidate;
 import com.example.model.CandidateManager;
 
 @Path("/add")
@@ -52,6 +52,7 @@ public class AddCandidate {
 //	        System.out.println("email: " + pass);
 	             
 	}
+	
 	@POST
 	@Path("/delete")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)

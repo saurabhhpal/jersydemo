@@ -1,4 +1,4 @@
-package com.example.webservice;
+package com.example.rest;
 
 import java.util.ArrayList;
 
@@ -11,8 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Request;
 import javax.ws.rs.core.UriInfo;
 
-
-import com.example.dao.Candidate;
+import com.example.model.Candidate;
 import com.example.model.CandidateManager;
 import com.google.gson.Gson;
 
