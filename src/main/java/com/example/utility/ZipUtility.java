@@ -1,6 +1,7 @@
 package com.example.utility;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.zip.ZipEntry;
@@ -55,27 +56,38 @@ public static byte[] zipMultipleFiles(List<EmailAttachment> attachmentList) thro
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     ZipOutputStream zos = new ZipOutputStream(baos);
     
-	System.out.println("in zip multiple files");
+//	System.out.println("in zip multiple files");
+//
+//	for(EmailAttachment attachmentList1 : attachmentList )
+//	{
+//		System.out.println(attachmentList1);
+//	}
 
-	for(EmailAttachment attachmentList1 : attachmentList )
-	{
-		System.out.println(attachmentList1);
-	}
-	
+    
 	for (EmailAttachment attachment : attachmentList) {
-        
 		
-        
-        ZipEntry zipEntry = new ZipEntry(attachment.getFilename());
-        zipEntry.setSize(attachment.getFileByteArray().length);
-        zos.putNextEntry(zipEntry);
-        zos.write(attachment.getFileByteArray());       
-            
-    }
+		String name= attachment.getFilename();
+		File fileToZip= new File("Dumps/Ho/Sales");//,attachment.getFilename());
+		if(!fileToZip.isDirectory())
+		{
+			System.out.println("sourceDirectory" + " is not a directory");
+		}
+		else
+				{
+					File[] files=fileToZip.listFiles();
+						//zip(fileToZip,name,zos);
+				ZipEntry zipEntry = new ZipEntry(attachment.getFilename());
+				zipEntry.setSize(attachment.getFileByteArray().length);
+				zos.putNextEntry(zipEntry);
+				zos.write(attachment.getFileByteArray());       
+				    
+				}
+		}
 	zos.closeEntry();
     zos.close();
     return baos.toByteArray();
+
+	
+
 }
-
-
 }

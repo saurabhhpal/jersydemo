@@ -20,7 +20,7 @@ public class ZipService {
 	attachment1.setFileByteArray(input1);
 	attachment1.setFilename(filename1);
 	attachmentList.add(attachment1);
-	System.out.print(attachmentList);
+	//System.out.print(attachmentList);
 	
 	String filename2="def.xml";
 	String cont2="<home>pal</home>";	

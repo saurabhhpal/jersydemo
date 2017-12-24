@@ -2,9 +2,6 @@ package com.example.model;
 
 import java.sql.Connection;
 import java.util.ArrayList;
-
-import javax.ws.rs.core.Response;
-
 import com.example.dao.DataAccessLayer;
 import com.example.dao.Database;
 

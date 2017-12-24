@@ -21,6 +21,7 @@ public class ZipUnzip {
 	
 	@GET
 	@Path("/download")
+	
 	@Produces("application/zip")
 	public byte[] zipMultipleFiles() throws IOException {
 		return new  ZipService().zipMultipleFiles();
